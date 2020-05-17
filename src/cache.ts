@@ -6,8 +6,11 @@ export default class Cache {
 
     private readonly cachePath: string;
 
-    constructor(cachePath: string) {
+    constructor(cachePath: string, ttl?: number) {
       this.cache = Cache.loadCache(cachePath);
+      if (ttl) {
+        this.purgeExpired(ttl);
+      }
       this.cachePath = cachePath;
     }
 
@@ -36,5 +39,15 @@ export default class Cache {
         file = '';
       }
       return file ? JSON.parse(file) : {};
+    }
+
+    private purgeExpired(ttl: number): void {
+      const expirationDate = new Date();
+      expirationDate.setDate(new Date().getDate() - ttl);
+      for (const [key, value] of Object.entries(this.cache)) {
+        if (value.updatedAt && value.updatedAt < expirationDate) {
+          this.delete(key);
+        }
+      }
     }
 }
