@@ -16,7 +16,7 @@ export default class Cache {
     }
 
     set(key: CommitSHA, value: Contributor): void {
-      this.cache[key] = { ...value, timestamp: new Date() };
+      this.cache[key] = { ...value, updatedAt: new Date() };
     }
 
     delete(key: CommitSHA): void {
