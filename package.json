@@ -36,6 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
     "@vuepress/shared-utils": "^1.4.1",
+    "cac": "6.5.5",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
@@ -47,8 +48,7 @@
     "vue-router": "^3.1.6",
     "vuepress-types": "^0.9.1"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "prettier": {
     "trailingComma": "all",
     "tabWidth": 2,
