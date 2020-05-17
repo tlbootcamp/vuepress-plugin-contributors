@@ -1,0 +1,90 @@
+{
+  "name": "vuepress-plugin-contributors",
+  "version": "0.1.0",
+  "description": "Shows GitHub contributors for each VuePress page\n\n",
+  "keywords": [
+    "vuepress",
+    "plugin",
+    "github",
+    "contributors"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "lint": "eslint --cache src/**/*.ts",
+    "pretty": "prettier --check src/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tlbootcamp/vuepress-plugin-contributors"
+  },
+  "bugs": {
+    "url": "https://github.com/tlbootcamp/vuepress-plugin-contributors"
+  },
+  "contributors": [
+    "Dima Boger <kotvberloge@gmail.com>",
+    "Sergey Sokolov <hi@teners.me> (https://teners.me)"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "@vuepress/shared-utils": "^1.4.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": ">=4",
+    "lint-staged": ">=10",
+    "prettier": "2.0.5",
+    "typescript": "^3.8.3",
+    "vue-router": "^3.1.6",
+    "vuepress-types": "^0.9.1"
+  },
+  "dependencies": {
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "printWidth": 100,
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  },
+  "eslintConfig": {
+    "parser": "vue-eslint-parser",
+    "parserOptions": {
+      "parser": "@typescript-eslint/parser",
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    },
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "airbnb-base",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:vue/strongly-recommended"
+    ],
+    "rules": {
+      "import/no-unresolved": "off",
+      "import/extensions": "off",
+      "no-continue": "off",
+      "no-restricted-syntax": "off"
+    }
+  }
+}
