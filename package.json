@@ -16,8 +16,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "lint": "eslint --cache src/**/*.ts",
-    "pretty": "prettier --check src/**/*.ts"
+    "lint": "eslint --cache src",
+    "pretty": "prettier --check src"
   },
   "repository": {
     "type": "git",
@@ -35,7 +35,6 @@
     "@types/node": "^13.13.4",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
-    "@vuepress/shared-utils": "^1.4.1",
     "cac": "6.5.5",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
@@ -48,7 +47,9 @@
     "vue-router": "^3.1.6",
     "vuepress-types": "^0.9.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^2"
+  },
   "prettier": {
     "trailingComma": "all",
     "tabWidth": 2,
