@@ -1,0 +1,7 @@
+{
+  "name": "theme",
+  "version": "0.0.0",
+  "description": "Custom Theme with injected @tlbootcamp/contributor component",
+  "license": "MIT",
+  "dependencies": {}
+}
