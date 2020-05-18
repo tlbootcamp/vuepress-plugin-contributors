@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "vuepress": "^1.5.0",
-    "custom-theme": "file:./src/.vuepress/theme",
-    "vuepress-plugin-contributors": "file:../lib"
+    "vuepress-plugin-contributors": "file:../",
+    "custom-theme": "file:./src/.vuepress/theme"
   }
 }
