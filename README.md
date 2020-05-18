@@ -17,12 +17,12 @@ yarn add @tlbootcamp/vuepress-plugin-contributors
 
 ## Usage
 
-You can use component as itself: just write `<Contributors/>` in .md file and vuala.
+You can use the component by itself: add `<Contributors/>` to any `.md` file and voila.
 
-But most valuable part of this plugin is ability to inject contributor list to each page.
-Unfortunately, vuepress allows customize Page component only via custom themes, so you need to do some magic.
+But the most valuable part of this plugin is the ability to inject a distinct contributor list into each page.
+Unfortunately, VuePress allows to customize the `Page` component only via custom themes, so you need to do some magic as follows.
 
-Create `theme` directory in your `.vuepress`, fill it with `index.js` and `layouts/Layout.vue` as in vuepress-example.
+Create `theme` directory in your `.vuepress`, `index.js` and `layouts/Layout.vue` there as in (vuepress-example)[vuepress-example].
 Then add this theme as file dependency to a project (example), and setup your theme to config.js (example).
 
-If you want change size or place of Contributors component in Page component, please use `Layout.vue` and theme customizing instructions.
+If you to want change size or position of the `Contributors` component in the `Page` component, please use `Layout.vue` and (theme customization instruction)[https://vuepress.vuejs.org/theme/writing-a-theme.html].
